@@ -1,6 +1,6 @@
+# https://leetcode.com/problems/two-sum/
+
 def twoSum(nums: list[int], target: int) -> list[int]:
-
-
     for num in nums:
         if num>target:
             continue
@@ -9,9 +9,6 @@ def twoSum(nums: list[int], target: int) -> list[int]:
             if target == num+next:
                 next_idx = nums[idx+1:].index(next)+len(nums[:idx+1])
                 return [idx, next_idx]
-
-
-    
     ans=0
     return ans
 
