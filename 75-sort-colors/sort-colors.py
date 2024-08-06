@@ -15,9 +15,9 @@ class Solution:
                 nums[l], nums[i] = nums[i], nums[l]
                 l += 1
             elif nums[i] == 2:
-                if i >= r:
-                    i=len(nums)
-                    continue
+                # if i >= r:
+                #     i=len(nums)
+                #     continue
                 nums[r], nums[i] = nums[i], nums[r]
                 r -= 1
             else:
