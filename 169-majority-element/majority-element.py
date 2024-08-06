@@ -1,5 +1,6 @@
 class Solution:
     def majorityElement(self, nums: List[int]) -> int:
+        n = len(nums)
         count = 1
         ele = nums[0]
 
@@ -15,7 +16,8 @@ class Solution:
             else:
 
                 count -=1
-
+            if count > n/2:
+                return ele
 
         return ele
 
