@@ -1,7 +1,7 @@
 class Solution:
     def majorityElement(self, nums: List[int]) -> int:
         d = {}
-        n = len(nums)
+        n = len(nums) / 2 
         for i in nums:
             try:
                 d[i] += 1
