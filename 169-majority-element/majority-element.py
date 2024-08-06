@@ -7,7 +7,7 @@ class Solution:
             except:
                 d[i] = 1
 
-        maxi = max(d, key=d.get)
-
+        maxi = max(d, key=lambda i:d[i])
+        # maxi = max(d)
 
         return maxi
