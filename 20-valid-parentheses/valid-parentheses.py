@@ -1,13 +1,14 @@
 class Solution:
     def isValid(self, s: str) -> bool:
         stack = []
+        sym = {
+            ")": "(",
+            "}":"{",
+            "]":"["
+        }
 
         for i in s:
-            sym = {
-                ")": "(",
-                "}":"{",
-                "]":"["
-            }
+            
             if i in ["(", "{", "["]:
                 stack.append(i)
             elif stack:
@@ -17,7 +18,9 @@ class Solution:
                     return False
             else:
                 return False
-        if stack:
-            return False
-        return True
+
+
+        return not stack
+
+
                 
