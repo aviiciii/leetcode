@@ -9,7 +9,7 @@ class Solution:
 
         for i in s:
             
-            if i in ["(", "{", "["]:
+            if i in sym.values():
                 stack.append(i)
             elif stack:
                 if sym[i] == stack[-1]:
